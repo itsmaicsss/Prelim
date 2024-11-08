@@ -11,7 +11,7 @@
 <div class="container d-flex flex-column align-items-center">
     <h2 class="text-center my-4">Student Enrollment And Grade Processing System</h2>
 
-    <!-- Form 1: Enrollment Form -->
+
     <form id="enrollmentForm" action="#" method="post" onsubmit="showGradeForm(event)" class="w-100 w-md-75 w-lg-50">
       <h5>Student Enrollment Form</h5>
 
@@ -50,5 +50,25 @@
       <button type="submit" class="btn btn-primary w-10">Submit Student Information</button>
     </form>
     
+    <div class="grade-form w-100 w-md-75 w-lg-50" id="gradeForm" style="display: none;">
+      <h5>Enter Grades for: <span id="studentName"></span></h5>
+
+      <form id="gradesForm" action="#" method="post" onsubmit="submitGrades(event)">
+        <div class="mb-3">
+          <label for="prelim">Prelim</label>
+          <input type="number" id="prelim" name="prelim" class="form-control" required min="0" max="100">
+        </div>
+        <div class="mb-3">
+          <label for="midterm">Midterm</label>
+          <input type="number" id="midterm" name="midterm" class="form-control" required min="0" max="100">
+        </div>
+        <div class="mb-3">
+          <label for="finals">Finals</label>
+          <input type="number" id="finals" name="finals" class="form-control" required min="0" max="100">
+        </div>
+        <button type="submit" class="btn btn-primary w-10">Submit Grades</button>
+      </form>
+    </div>
+
 </body>
 </html>
