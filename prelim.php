@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Student Enrollment Form</title>
-    
+
 <style>
     .status-passed { color: green; font-weight: bold; }
     .status-failed { color: red; font-weight: bold; }
@@ -112,10 +112,10 @@
       </div>
       <div class="mb-3">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" class="form-control" required><br>
+        <input type="email" id="email" name="email" class="form-control" required>
       </div>
       <button type="submit" class="btn btn-primary w-10">Submit Student Information</button>
-    </form>
+    </form><br>
 
     <h3>Student Details</h3>
       <p><b>First Name:</b> <span id="displayFirstName"></span></p>
