@@ -147,5 +147,34 @@
       document.getElementById('gradeForm').style.display = 'block';
     }
 
+    function submitGrades(event) {
+      event.preventDefault();
+
+      const prelim = parseFloat(document.getElementById('prelim').value);
+      const midterm = parseFloat(document.getElementById('midterm').value);
+      const finals = parseFloat(document.getElementById('finals').value);
+      const average = ((prelim + midterm + finals) / 3).toFixed(2);
+
+      let status = average >= 75 ? 'Passed' : 'Failed';
+      let statusClass = average >= 75 ? 'status-passed' : 'status-failed';
+
+      document.getElementById('displayFirstName').textContent = window.studentDetails.firstName;
+      document.getElementById('displayLastName').textContent = window.studentDetails.lastName;
+      document.getElementById('displayAge').textContent = window.studentDetails.age;
+      document.getElementById('displayGender').textContent = window.studentDetails.gender;
+      document.getElementById('displayCourse').textContent = window.studentDetails.course;
+      document.getElementById('displayEmail').textContent = window.studentDetails.email;
+      document.getElementById('displayPrelim').textContent = prelim;
+      document.getElementById('displayMidterm').textContent = midterm;
+      document.getElementById('displayFinals').textContent = finals;
+      document.getElementById('displayAverage').textContent = `${average} (${status})`;
+      document.getElementById('displayAverage').classList.add(statusClass);
+
+      document.getElementById('gradeForm').style.display = 'none';
+      document.getElementById('studentDetails').style.display = 'block';
+    }
+  </script>
+    
+
 </body>
 </html>
