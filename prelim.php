@@ -126,6 +126,26 @@
       <p><span id="displayAverage"></span></p>
     </div>
   </div>
-  
+
+  <script>
+    // Function to show the grade entry form after the student information is submitted
+    function showGradeForm(event) {
+      event.preventDefault();
+
+      const firstName = document.getElementById('first_name').value;
+      const lastName = document.getElementById('last_name').value;
+      const age = document.getElementById('age').value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const course = document.getElementById('course').value;
+      const email = document.getElementById('email').value;
+
+      window.studentDetails = { firstName, lastName, age, gender, course, email };
+
+      document.getElementById('studentName').textContent = firstName + ' ' + lastName;
+
+      document.getElementById('enrollmentForm').style.display = 'none';
+      document.getElementById('gradeForm').style.display = 'block';
+    }
+
 </body>
 </html>
