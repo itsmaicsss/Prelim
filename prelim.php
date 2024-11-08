@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Student Enrollment Form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Student Enrollment Form</title>
 
-<style>
+  <style>
+
     .status-passed { color: green; font-weight: bold; }
     .status-failed { color: red; font-weight: bold; }
-</style>
+  </style>
 
 </head>
 <body>
 
-<div class="container d-flex flex-column align-items-center">
+  <div class="container d-flex flex-column align-items-center">
     <h2 class="text-center my-4">Student Enrollment And Grade Processing System</h2>
 
 
@@ -48,6 +49,7 @@
           <option value="BSIT" checked>BSIT</option>
           <option value="BSHRM">BSHRM</option>
           <option value="BSBA">BSBA</option>
+
         </select>
       </div>
       <div class="mb-3">
@@ -56,7 +58,8 @@
       </div>
       <button type="submit" class="btn btn-primary w-10">Submit Student Information</button>
     </form>
-    
+
+
     <div class="grade-form w-100 w-md-75 w-lg-50" id="gradeForm" style="display: none;">
       <h5>Enter Grades for: <span id="studentName"></span></h5>
 
@@ -76,6 +79,7 @@
         <button type="submit" class="btn btn-primary w-10">Submit Grades</button>
       </form>
     </div>
+
 
     <div id="studentDetails" class="student-details w-100 w-md-75 w-lg-50 mt-4" style="display: none;">
     <form id="enrollmentForm" action="#" method="post" onsubmit="showGradeForm(event)" class="w-100 w-md-75 w-lg-50">
@@ -112,11 +116,11 @@
       </div>
       <div class="mb-3">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" class="form-control" required>
+        <input type="email" id="email" name="email" class="form-control" required><br>
       </div>
       <button type="submit" class="btn btn-primary w-10">Submit Student Information</button>
-    </form><br>
-
+    </form>
+    
     <h3>Student Details</h3>
       <p><b>First Name:</b> <span id="displayFirstName"></span></p>
       <p><b>Last Name:</b> <span id="displayLastName"></span></p>
@@ -134,7 +138,7 @@
   </div>
 
   <script>
-    // Function to show the grade entry form after the student information is submitted
+
     function showGradeForm(event) {
       event.preventDefault();
 
@@ -180,7 +184,7 @@
       document.getElementById('studentDetails').style.display = 'block';
     }
   </script>
-    
 
+  
 </body>
 </html>
